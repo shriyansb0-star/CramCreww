@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - CramCrew</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #4A6FFF, #7F9CF5);
+      min-height: 100vh;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin: 0 10px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      background: #4A6FFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>CramCrew</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <h1>Contact Us</h1>
+    <p>Have questions or need help? Reach out to the CramCrew team.</p>
+
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea rows="4" placeholder="Your Message"></textarea>
+
+    <button onclick="sendMessage()">Send Message</button>
+  </div>
+
+  <div class="card">
+    <h2>Our Location</h2>
+    <p>Fremont, California</p>
+
+    <!-- Google Maps Embed -->
+    <iframe 
+      src="https://maps.google.com/maps?q=Fremont%20California&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+  </div>
+
+</div>
+
+<script>
+function sendMessage() {
+  alert("Message sent! (This is a demo — connect a backend later)");
+}
+</script>
+
+</body>
+</html>
