@@ -1,129 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CramCrew</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>CramCrew</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-    body {
-      background: linear-gradient(135deg, #4A6FFF, #7F9CF5);
-      min-height: 100vh;
-      color: #333;
-    }
+body {
+  background: #f5f7fb;
+  color: #333;
+}
 
-    nav {
-      background: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+/* NAV */
+nav {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
 
-    nav a {
-      text-decoration: none;
-      margin-left: 15px;
-      color: #333;
-      font-weight: 500;
-    }
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+}
 
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      color: white;
-    }
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #4A6FFF, #7F9CF5);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
 
-    header h1 {
-      font-size: 2.8rem;
-    }
+.hero h1 {
+  font-size: 3rem;
+}
 
-    header p {
-      opacity: 0.9;
-      margin-top: 10px;
-    }
+.hero p {
+  margin-top: 10px;
+  opacity: 0.9;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+/* IMAGE BANNER */
+.hero img {
+  width: 90%;
+  max-width: 700px;
+  margin-top: 30px;
+  border-radius: 15px;
+}
 
-    .card {
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
-    h2 {
-      margin-bottom: 15px;
-    }
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
 
-    input, select {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      font-size: 14px;
-    }
+input, select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      background: #4A6FFF;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      margin-top: 15px;
-      cursor: pointer;
-    }
+button {
+  margin-top: 15px;
+  padding: 14px;
+  width: 100%;
+  background: #4A6FFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-    button:hover {
-      background: #3b5be0;
-    }
+button:hover {
+  background: #3b5be0;
+}
 
-    .match-card {
-      background: #f5f7ff;
-      border-radius: 10px;
-      padding: 15px;
-      margin-top: 10px;
-      border-left: 5px solid #4A6FFF;
-    }
+/* MATCH */
+.match-card {
+  background: #eef2ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
+/* FEATURE SECTION */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
 
-    @media (max-width: 600px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+.features img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* FORM */
+iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  border: none;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .grid, .features {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
   <strong>CramCrew</strong>
   <div>
@@ -135,20 +157,45 @@
 </nav>
 
 <!-- HERO -->
-<header>
-  <h1>CramCrew</h1>
-  <p>Study smarter. Find your crew.</p>
-</header>
+<div class="hero">
+  <h1>Find Your Study Crew</h1>
+  <p>Stay motivated. Study together. Succeed faster.</p>
+
+  <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Students studying together">
+</div>
 
 <div class="container">
 
-  <!-- PROFILE FORM -->
+  <!-- FEATURES -->
+  <div class="card">
+    <h2>Why CramCrew?</h2>
+    <div class="features">
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+        <p>Match with students in your classes</p>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644">
+        <p>Stay motivated with study partners</p>
+      </div>
+
+      <div>
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173">
+        <p>Choose your study style</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROFILE -->
   <div class="card">
     <h2>Create Your Profile</h2>
 
     <div class="grid">
       <input type="text" id="name" placeholder="Your Name">
-      <input type="text" id="subjects" placeholder="Subjects (e.g. Math, Biology)">
+      <input type="text" id="subjects" placeholder="Subjects">
     </div>
 
     <div class="grid">
@@ -171,54 +218,32 @@
     <button onclick="findMatch()">Find My Crew 🚀</button>
   </div>
 
-  <!-- MATCH RESULTS -->
+  <!-- MATCHES -->
   <div class="card">
     <h2>Your Matches</h2>
     <div id="results"></div>
   </div>
 
-  <!-- GOOGLE FORM SIGNUP -->
+  <!-- GOOGLE FORM -->
   <div class="card">
     <h2>Join CramCrew</h2>
-    <p>Sign up and we’ll match you with study partners!</p>
+    <p>Sign up and we’ll match you!</p>
 
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSeMu2YCe99GbZy3Fin0Dp3nbdeV7nZCgRby3W7oGakbCK4k8g/viewform?embedded=true">
-      Loading…
-    </iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMu2YCe99GbZy3Fin0Dp3nbdeV7nZCgRby3W7oGakbCK4k8g/viewform?embedded=true"></iframe>
   </div>
 
 </div>
 
 <script>
 function findMatch() {
-  const name = document.getElementById("name").value;
-  const subjects = document.getElementById("subjects").value;
-  const availability = document.getElementById("availability").value;
-  const style = document.getElementById("style").value;
-
-  if (!name || !subjects || !availability || !style) {
-    alert("Please complete all fields!");
-    return;
-  }
-
   const matches = [
-    { name: "Avi", subjects: "Math", style: "Collaborative" },
-    { name: "Aarushi", subjects: "Biology", style: "Quiet" },
-    { name: "Anshika", subjects: "Chemistry", style: "Group" },
-    {name: "Ishaan", subjects: "Wrestling", style: "Group" }
+    { name: "Alex", subject: "Math" },
+    { name: "Jordan", subject: "Biology" }
   ];
 
   let output = "";
-
-  matches.forEach(match => {
-    output += `
-      <div class="match-card">
-        <strong>${match.name}</strong><br>
-        📚 ${match.subjects}<br>
-        🤝 ${match.style}
-      </div>
-    `;
+  matches.forEach(m => {
+    output += `<div class="match-card"><strong>${m.name}</strong><br>${m.subject}</div>`;
   });
 
   document.getElementById("results").innerHTML = output;
