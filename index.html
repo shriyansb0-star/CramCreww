@@ -1,66 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cram Crew | Study Smarter Together</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>CramCrew</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #4A6FFF, #7F9CF5);
+      min-height: 100vh;
+      color: #333;
+    }
+
+    nav {
+      background: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      margin-left: 15px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    header p {
+      opacity: 0.9;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #4A6FFF;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #3b5be0;
+    }
+
+    .match-card {
+      background: #f5f7ff;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 10px;
+      border-left: 5px solid #4A6FFF;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <nav>
-        <div class="container">
-            <h1>Cram Crew</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#join">Join the Crew</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- NAVBAR -->
+<nav>
+  <strong>CramCrew</strong>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-    <section id="join" class="hero">
-        <div class="container">
-            <h2>Level Up Your Grades</h2>
-            <p>Join a community of students dedicated to collaborative learning and academic success.</p>
-            <div class="join-card">
-                <h3>How to Join</h3>
-                <ol>
-                    <li>Fill out the registration form below.</li>
-                    <li>Attend our weekly orientation every Monday at 5 PM.</li>
-                    <li>Get matched with a study pod!</li>
-                </ol>
-                <a href="#" class="btn">Register Now</a>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<header>
+  <h1>CramCrew</h1>
+  <p>Study smarter. Find your crew.</p>
+</header>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have questions? We're here to help.</p>
-            
-            <form class="contact-form">
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea rows="5" placeholder="How can we help?"></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
+<div class="container">
 
-    <footer>
-        <p>&copy; 2026 Cram Crew. All rights reserved.</p>
-    </footer>
+  <!-- PROFILE FORM -->
+  <div class="card">
+    <h2>Create Your Profile</h2>
+
+    <div class="grid">
+      <input type="text" id="name" placeholder="Your Name">
+      <input type="text" id="subjects" placeholder="Subjects (e.g. Math, Biology)">
+    </div>
+
+    <div class="grid">
+      <select id="availability">
+        <option value="">Availability</option>
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+      </select>
+
+      <select id="style">
+        <option value="">Study Style</option>
+        <option>Quiet</option>
+        <option>Collaborative</option>
+        <option>Group</option>
+        <option>Solo</option>
+      </select>
+    </div>
+
+    <button onclick="findMatch()">Find My Crew 🚀</button>
+  </div>
+
+  <!-- MATCH RESULTS -->
+  <div class="card">
+    <h2>Your Matches</h2>
+    <div id="results"></div>
+  </div>
+
+  <!-- GOOGLE FORM SIGNUP -->
+  <div class="card">
+    <h2>Join CramCrew</h2>
+    <p>Sign up and we’ll match you with study partners!</p>
+
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeMu2YCe99GbZy3Fin0Dp3nbdeV7nZCgRby3W7oGakbCK4k8g/viewform?embedded=true">
+      Loading…
+    </iframe>
+  </div>
+
+</div>
+
+<script>
+function findMatch() {
+  const name = document.getElementById("name").value;
+  const subjects = document.getElementById("subjects").value;
+  const availability = document.getElementById("availability").value;
+  const style = document.getElementById("style").value;
+
+  if (!name || !subjects || !availability || !style) {
+    alert("Please complete all fields!");
+    return;
+  }
+
+  const matches = [
+    { name: "Alex", subjects: "Math", style: "Collaborative" },
+    { name: "Jordan", subjects: "Biology", style: "Quiet" },
+    { name: "Taylor", subjects: "Chemistry", style: "Group" }
+  ];
+
+  let output = "";
+
+  matches.forEach(match => {
+    output += `
+      <div class="match-card">
+        <strong>${match.name}</strong><br>
+        📚 ${match.subjects}<br>
+        🤝 ${match.style}
+      </div>
+    `;
+  });
+
+  document.getElementById("results").innerHTML = output;
+}
+</script>
 
 </body>
 </html>
