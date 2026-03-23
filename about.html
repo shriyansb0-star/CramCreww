@@ -1,90 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us - CramCrew</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>About CramCrew</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<style>
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI'; }
 
-    body {
-      background: linear-gradient(135deg, #4A6FFF, #7F9CF5);
-      min-height: 100vh;
-      color: #333;
-    }
+body {
+  background:#f5f7fb;
+}
 
-    nav {
-      background: white;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+nav {
+  background:white;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+}
 
-    nav a {
-      text-decoration: none;
-      margin-left: 15px;
-      color: #333;
-      font-weight: 500;
-    }
+nav a {
+  margin-left:15px;
+  text-decoration:none;
+  color:#333;
+}
 
-    header {
-      text-align: center;
-      padding: 50px 20px;
-      color: white;
-    }
+header {
+  text-align:center;
+  padding:50px 20px;
+  background:linear-gradient(135deg,#4A6FFF,#7F9CF5);
+  color:white;
+}
 
-    header h1 {
-      font-size: 2.6rem;
-    }
+header img {
+  width:90%;
+  max-width:700px;
+  margin-top:20px;
+  border-radius:15px;
+}
 
-    header p {
-      margin-top: 10px;
-      opacity: 0.9;
-    }
+.container {
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+.card {
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  margin-bottom:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
 
-    .card {
-      background: white;
-      border-radius: 15px;
-      padding: 25px;
-      margin-bottom: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      margin-bottom: 10px;
-    }
-
-    p {
-      line-height: 1.6;
-      margin-top: 10px;
-    }
-
-    .highlight {
-      background: #eef2ff;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 15px;
-    }
-
-  </style>
+.section-img {
+  width:100%;
+  border-radius:10px;
+  margin-top:15px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <strong>CramCrew</strong>
   <div>
@@ -95,62 +73,31 @@
   </div>
 </nav>
 
-<!-- HEADER -->
 <header>
   <h1>About CramCrew</h1>
-  <p>Connecting students. Building better study habits.</p>
+  <p>Making studying social and effective</p>
+
+  <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b">
 </header>
 
 <div class="container">
 
-  <!-- MISSION -->
   <div class="card">
     <h2>Our Mission</h2>
-    <p>
-      CramCrew was created to solve a simple but common problem: students struggle to stay motivated when studying alone.
-      Our goal is to make studying more social, engaging, and effective by connecting students with the right study partners.
-    </p>
+    <p>CramCrew helps students stay motivated by connecting them with compatible study partners.</p>
+    <img class="section-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
   </div>
 
-  <!-- PROBLEM -->
   <div class="card">
     <h2>The Problem</h2>
-    <p>
-      Many students face the same challenges:
-    </p>
-
-    <div class="highlight">
-      <p>• Lack of motivation</p>
-      <p>• Difficulty finding people in the same classes</p>
-      <p>• Studying alone for long periods</p>
-    </div>
+    <p>Students often struggle with motivation, isolation, and finding others in the same classes.</p>
+    <img class="section-img" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3">
   </div>
 
-  <!-- SOLUTION -->
   <div class="card">
     <h2>Our Solution</h2>
-    <p>
-      CramCrew matches students based on:
-    </p>
-
-    <div class="highlight">
-      <p>📚 Subjects & classes</p>
-      <p>⏰ Availability</p>
-      <p>🤝 Study style preferences</p>
-    </div>
-
-    <p>
-      By keeping the platform simple and free, we make it easy for anyone to quickly find a study partner or group.
-    </p>
-  </div>
-
-  <!-- VISION -->
-  <div class="card">
-    <h2>Our Vision</h2>
-    <p>
-      We believe studying shouldn't feel isolating. Our vision is to build a community where students support each other,
-      stay accountable, and succeed together.
-    </p>
+    <p>We match students based on subjects, availability, and study style preferences.</p>
+    <img class="section-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
   </div>
 
 </div>
